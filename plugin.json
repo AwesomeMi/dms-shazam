@@ -1,0 +1,32 @@
+{
+    "$schema": "https://github.com/AvengeMedia/DankMaterialShell/raw/refs/heads/master/PLUGINS/plugin-schema.json",
+    "id": "shazam",
+    "name": "Shazam",
+    "description": "Identify the song playing around you straight from the DankBar, powered by SongRec",
+    "version": "1.3.0",
+    "author": "AwesomeMi",
+    "license": "MIT",
+    "type": "composite",
+    "capabilities": [
+        "dankbar-widget",
+        "daemon"
+    ],
+    "icon": "graphic_eq",
+    "components": {
+        "widget": "./ShazamWidget.qml",
+        "daemon": "./ShazamDaemon.qml"
+    },
+    "settings": "./ShazamSettings.qml",
+    "startupCheck": "./StartupCheck.qml",
+    "requires_dms": ">=1.5.0",
+    "dependencies": [
+        "songrec",
+        "libpulse"
+    ],
+    "permissions": [
+        "settings_read",
+        "settings_write",
+        "process",
+        "network"
+    ]
+}
