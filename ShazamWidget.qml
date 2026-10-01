@@ -136,7 +136,7 @@ PluginComponent {
         if (!url) {
             return;
         }
-        Quickshell.execDetached(["xdg-open", url]);
+        Quickshell.execDetached(["dms", "open", url]);
     }
 
     function setSource(index) {
